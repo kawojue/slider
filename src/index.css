@@ -10,20 +10,52 @@ body {
   @apply mt-14 grid place-items-center;
 }
 
+.trans-all-linear {
+  @apply transition-all duration-300 ease-linear;
+}
+
 main {
   @apply w-[93vw] max-w-[800px] grid justify-center;
 }
 
 h1 {
-  @apply flex gap-3 font-semibold text-2xl text-pry-clr-1 text-center;
+  @apply flex gap-3 font-semibold text-2xl text-pry-clr-1 items-center w-full;
 }
 
 h1 span {
   @apply text-pry-clr-2;
 }
 
-@media screen and (min-width: 900px) {
-  h1 {
-    @apply text-4xl;
-  }
+.menu {
+  @apply flex gap-5 items-center;
+}
+
+.headings {
+  @apply flex flex-col gap-0.5 items-center w-full mb-9;
+}
+
+.photo {
+  @apply w-[150px] h-[150px] rounded-full border-[0.3125rem] border-pry-clr-3 object-cover mb-2;
+  box-shadow: rgb(97, 125, 152) 0px 3px 8px;
+}
+
+h3,
+h5 {
+  @apply text-[1.05rem]
+}
+
+h3 {
+  @apply text-pry-clr-2 font-semibold uppercase tracking-wider;
+}
+
+h5 {
+  @apply text-pry-clr-3 capitalize;
+}
+
+.btn {
+  @apply p-1 text-white bg-pry-clr-3 text-2xl rounded-lg trans-all-linear;
+}
+
+.btn:hover {
+  @apply bg-pry-clr-2;
 }
