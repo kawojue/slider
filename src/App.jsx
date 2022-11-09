@@ -20,12 +20,12 @@ function App() {
           <FiChevronLeft />
         </button>
         <article>
-          <div>
-            <img src={image} alt={name} />
+          <div className="headings">
+            <img src={image} alt={name} className="photo" />
             <h3>{name}</h3>
             <h5>{title}</h5>
           </div>
-          <div>
+          <div className="info">
             <p>{quote}</p>
             <FaQuoteRight />
           </div>
