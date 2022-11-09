@@ -5,3 +5,25 @@
 body {
   @apply font-poppins bg-pry-clr-0;
 }
+
+#root {
+  @apply mt-14 grid place-items-center;
+}
+
+main {
+  @apply w-[93vw] max-w-[800px] grid justify-center;
+}
+
+h1 {
+  @apply flex gap-3 font-semibold text-2xl text-pry-clr-1 text-center;
+}
+
+h1 span {
+  @apply text-pry-clr-2;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    @apply text-4xl;
+  }
+}
