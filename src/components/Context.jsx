@@ -28,7 +28,7 @@ export const DataContext = ({ children }) => {
     useEffect(() => {
         let auto = setInterval(() => {
             next()
-        }, 2000)
+        }, 5000)
         return () => {
             clearInterval(auto)
         }
@@ -36,8 +36,8 @@ export const DataContext = ({ children }) => {
 
     return (
         <Context.Provider value={{
-            people, active, setActive,
-            next, prev
+            next, prev,
+            people, setActive
         }}>
             {children}
         </Context.Provider>
