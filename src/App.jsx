@@ -11,26 +11,26 @@ function App() {
 
   return (
     <main>
-      <h1 className="md:text-4xl">
+      <header className="md:text-4xl">
         <span>/</span>
-        Reviews
-      </h1>
+        <h1>Reviews</h1>
+      </header>
       <section className="menu">
-        <button className="btn" onClick={() => prev()}>
+        <button className="btn md:text-2xl" onClick={() => prev()}>
           <FiChevronLeft />
         </button>
         <article>
           <div className="headings">
             <img src={image} alt={name} className="photo" />
-            <h3>{name}</h3>
-            <h5>{title}</h5>
+            <h3 className="md:text-[1.05rem]">{name}</h3>
+            <h5 className="md:text-[1.05rem]">{title}</h5>
           </div>
           <div className="info">
-            <p>{quote}</p>
-            <FaQuoteRight />
+            <p className="quote md:text-[0.9rem] md:leading-[1.55rem]">{quote}</p>
+            <FaQuoteRight className="icon md:text-5xl" />
           </div>
         </article>
-        <button className="btn" onClick={() => next()}>
+        <button className="btn md:text-2xl" onClick={() => next()}>
           <FiChevronRight />
         </button>
       </section>

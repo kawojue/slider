@@ -18,11 +18,15 @@ main {
   @apply w-[93vw] max-w-[800px] grid justify-center;
 }
 
-h1 {
-  @apply flex gap-3 font-semibold text-2xl text-pry-clr-1 items-center w-full;
+header {
+  @apply flex gap-3 text-2xl items-center w-full justify-center tracking-wider font-semibold mb-10;
 }
 
-h1 span {
+header h1 {
+  @apply text-pry-clr-1;
+}
+
+header span {
   @apply text-pry-clr-2;
 }
 
@@ -41,7 +45,7 @@ h1 span {
 
 h3,
 h5 {
-  @apply text-[1.05rem]
+  @apply text-[0.85rem];
 }
 
 h3 {
@@ -53,9 +57,21 @@ h5 {
 }
 
 .btn {
-  @apply p-1 text-white bg-pry-clr-3 text-2xl rounded-lg trans-all-linear;
+  @apply p-1 text-white bg-pry-clr-3 text-lg rounded-lg trans-all-linear;
 }
 
 .btn:hover {
   @apply bg-pry-clr-2;
+}
+
+.info {
+  @apply flex flex-col items-center gap-5 text-center;
+}
+
+.quote {
+  @apply text-xs text-pry-clr-3 leading-[1.85rem];
+}
+
+.icon {
+  @apply text-3xl text-pry-clr-2 font-semibold;
 }
