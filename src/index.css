@@ -27,7 +27,7 @@ header span {
 }
 
 .menu {
-  @apply flex gap-5 items-center;
+  @apply w-[93vw] max-w-[800px] flex gap-5 items-center;
 }
 
 .headings {
@@ -61,7 +61,7 @@ h5 {
 }
 
 .section-center {
-  @apply flex w-[93vw] max-w-[800px] h-[500px] text-center relative overflow-hidden;
+  @apply flex w-full h-[500px] text-center relative overflow-hidden;
 }
 
 article {
