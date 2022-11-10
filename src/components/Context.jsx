@@ -5,24 +5,23 @@ const Context = createContext({})
 
 export const DataContext = ({ children }) => {
     const [active, setActive] = useState(0)
-    const [people, setPoeple] = useState(data[active])
 
-    const prev = () => {
-        if (active === 0) {
-            setActive(data.length - 1)
-        } else {
-            setActive(active - 1)
+    const move = action => {
+        if (action === 'prev') {
+            if (active === 0) {
+                setActive(data.length - 1)
+            } else {
+                setActive(active - 1)
+            }
         }
-        setPoeple(data[active])
-    }
 
-    const next = () => {
-        if (active === data.length - 1) {
-            setActive(0)
-        } else {
-            setActive(active + 1)
+        if (action === 'next') {
+            if (active === data.length - 1) {
+                setActive(0)
+            } else {
+                setActive(active + 1)
+            }
         }
-        setPoeple(data[active])
     }
 
     useEffect(() => {
@@ -36,8 +35,8 @@ export const DataContext = ({ children }) => {
 
     return (
         <Context.Provider value={{
-            next, prev,
-            people, setActive
+            move, active,
+            setActive, data
         }}>
             {children}
         </Context.Provider>
