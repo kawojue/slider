@@ -26,7 +26,7 @@ export const DataContext = ({ children }) => {
 
     useEffect(() => {
         let auto = setInterval(() => {
-            next()
+            move('next')
         }, 5000)
         return () => {
             clearInterval(auto)
