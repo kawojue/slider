@@ -14,10 +14,6 @@ body {
   @apply transition-all duration-300 ease-linear;
 }
 
-main {
-  @apply w-[93vw] max-w-[800px] grid justify-center;
-}
-
 header {
   @apply flex gap-3 text-2xl items-center w-full justify-center tracking-wider font-semibold mb-10;
 }
@@ -62,6 +58,26 @@ h5 {
 
 .btn:hover {
   @apply bg-pry-clr-2;
+}
+
+.section-center {
+  @apply flex w-[93vw] max-w-[800px] h-[500px] text-center relative overflow-hidden;
+}
+
+article {
+  @apply absolute top-0 left-0 w-full h-full opacity-0 trans-all-linear;
+}
+
+article.activeSlide {
+  @apply translate-x-0 opacity-[1];
+}
+
+article.lastSlide {
+  @apply translate-x-[-100%];
+}
+
+article.nextSlide {
+  @apply translate-x-[100%];
 }
 
 .info {
